@@ -133,10 +133,12 @@
       z-index: 20;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       transition: background-color 0.3s ease;
+        display: none;
     }
 
     .side-button:hover {
       background-color: #a3c83b;
+        display: none;
     }
 
     #left-btn {
@@ -159,6 +161,53 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+.image-wrapper {
+  width: 300px;
+  height: 200px;
+  border: 3px solid black;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.angela-wrapper img {
+  filter: blur(10px);
+}
+img[src="angela.jpg"] {
+  filter: blur(50px);
+  
+}
+.fsf-banner {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #ffffff;
+  border: 4px solid black;
+  text-align: center;
+}
+
+.fsf-text {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.fsf-link {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #0057b7;
+  text-decoration: none;
+}
+
+.fsf-link:hover {
+  text-decoration: underline;
+  color: #003b80;
 }
   </style>
 </head>
@@ -187,7 +236,9 @@
   <img src="LINUS.jpg" alt="Mr.Linus">
   <img src="TEREYDAVIS.jpg" alt="King.Terry">
   <img src="BOOBYFISHER.jpg" alt="Mr.Bobby">
+  <div class="image-wrapper angela-wrapper">
   <img src="angela.jpg" alt="mommy angela">
+</div>
 </div>
 
       <hr />
@@ -201,8 +252,17 @@
 
       <div class="spacer"></div>
 
-      <img class="logo" src="USSR.png" width="75" height="75" alt="Logo"/>
-    </div>
+      <!--<img class="logo" src="USSR.png" width="75" height="75" alt="Logo"/>-->
+
+ <div class="fsf-banner">
+  <p class="fsf-text">ABOUT FREE SOFTWARE MOVEMENT</p>
+  <a href="https://www.fsf.org/about/what-is-free-software" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/FSF_Logo.svg" alt="Support Free Software" />
+  </a>
+</div>
+  
+
+    
   </div>
 
   <!-- Side buttons -->
