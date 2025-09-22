@@ -214,6 +214,99 @@ img[src="angela.jpg"] {
   color: #003b80;
 }
 
+/* existing styles above */
+
+@media (max-width: 768px) {
+  #header {
+    width: calc(100% - 40px);
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 10px;
+  }
+
+  #header a {
+    font-size: 1em;
+    gap: 5px;
+  }
+
+  #header img {
+    width: 16px;
+    height: 16px;
+  }
+
+  #main {
+    min-height: auto;
+    padding: 20px 10px 40px;
+  }
+
+  #context {
+    width: calc(100% - 20px);
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  #context h1 {
+    font-size: 2em;
+  }
+
+  #context .label {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  .gallery {
+    gap: 10px;
+  }
+
+  .gallery img, 
+  .image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .side-button {
+    width: 60px;
+    height: 60px;
+    font-size: 0.9em;
+  }
+
+  #penguin {
+    width: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  #header a {
+    font-size: 0.9em;
+  }
+
+  #context h1 {
+    font-size: 1.6em;
+  }
+
+  #context .label {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .side-button {
+    width: 50px;
+    height: 50px;
+    font-size: 0.8em;
+  }
+
+  #penguin {
+    width: 50px;
+  }
+}
 
 
 
