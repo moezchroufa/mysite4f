@@ -317,7 +317,7 @@ img[src="angela.jpg"] {
 
   
   <div id="header">
-    <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />Facebook</a>
+    <a href="https://www.facebook.com/"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />Facebook</a>
     <a href="https://www.instagram.com/moezcsphile/"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />Instagram</a>
     <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />YouTube</a>
     <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />GitHub</a>
@@ -343,6 +343,7 @@ img[src="angela.jpg"] {
 </div>
 </div>
 
+
       <hr />
 
       <p>What you’re seeing now are the people who inspired me to become who I am today.
@@ -362,7 +363,13 @@ img[src="angela.jpg"] {
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/FSF_Logo.svg" alt="Support Free Software" />
   </a>
 </div>
-  
+
+
+<div class="message-box">
+    <label for="message">Write a message:</label><br />
+    <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..."></textarea><br />
+    <button onclick="sendMessage()">Send</button>
+</div>
 
     
   </div>
@@ -377,6 +384,8 @@ img[src="angela.jpg"] {
   <!-- Audio element -->
   <audio id="moaning" src="8694-moan-earrape.mp3" preload="auto"></audio>
   <audio id="farting" src="proud-fart-288263.mp3" preload="auto"></audio>
+
+
   <script>
   const sound1 = document.getElementById('moaning');
   const sound2 = document.getElementById('farting');
@@ -431,6 +440,20 @@ function loopPenguin() {
     penguin.style.left = '0px';
   }, 20000);
 }
+
+
+
+ function sendMessage() {
+    const message = document.getElementById('message').value;
+
+    fetch('http://localhost:9696/api/send-message', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message })
+    });
+  }
+
+
 
 
 setInterval(loopPenguin, 30000);
